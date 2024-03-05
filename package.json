@@ -1,0 +1,12 @@
+{
+  "name": "feedlify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-all":  "pnpm -r --parallel start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
