@@ -8,6 +8,6 @@
     "run-all":  "pnpm -r --parallel start"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "a.cava94@gmail.com",
+  "license": "MIT2"
 }
