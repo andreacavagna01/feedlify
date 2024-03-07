@@ -3,10 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { addNumbers }  from 'shared-frontend'
+import { api } from 'shared-frontend/api'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const test = api.get('/item');
   return (
     <>
       <div>
