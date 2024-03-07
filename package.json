@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:db": "./infrastructure/database-script.sh",
     "run-all":  "pnpm -r --parallel start"
   },
   "keywords": [],
