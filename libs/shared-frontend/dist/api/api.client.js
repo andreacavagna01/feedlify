@@ -1,5 +1,4 @@
 import axios from 'axios';
-const API_ROOT = 'http://localhost:3000';
 export const api = {
     get(url, options = { absoluteUrl: false }) {
         return axios

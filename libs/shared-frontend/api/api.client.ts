@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-
-const API_ROOT = 'http://localhost:3000';
-
 interface IOptions {
   absoluteUrl: boolean;
 }
@@ -74,7 +71,6 @@ export const api = {
 function getHeaders() {
   return undefined;
  /* const token = localStorage.getItem('auth_token');
-
   return token
     ? {
         Authorization: `Bearer ${token}`,

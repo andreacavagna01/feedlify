@@ -2,8 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { addNumbers }  from 'shared-frontend'
-import { api } from 'shared-frontend/api'
+import { api } from '../../../libs/shared-frontend/api'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,7 +21,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => addNumbers(count, 1))}>
+        <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
