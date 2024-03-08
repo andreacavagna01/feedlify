@@ -2,7 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { api } from '../../../libs/shared-frontend/api'
+import { api } from 'shared-frontend/api'
+import { Card } from "design-system";
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +13,7 @@ function App() {
   const test = api.get('/item');
   return (
     <>
+      <Card description="test" title="test title" />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

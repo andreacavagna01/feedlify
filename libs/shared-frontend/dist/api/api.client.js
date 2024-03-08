@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_ROOT } from '../config';
 export const api = {
     get(url, options = { absoluteUrl: false }) {
         return axios

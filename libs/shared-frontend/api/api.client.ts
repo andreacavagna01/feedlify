@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_ROOT } from '../config';
 
 interface IOptions {
   absoluteUrl: boolean;
