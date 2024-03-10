@@ -18,6 +18,18 @@
 			"version": "latest"
 		}
 	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"angular.ng-template",
+				"johnpapa.angular2",
+				"sibiraj-s.vscode-scss-formatter",
+				"gruntfuggly.todo-tree",
+				"nrwl.angular-console",
+			]
+		}
+	},
+	
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
