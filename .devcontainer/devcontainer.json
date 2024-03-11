@@ -25,7 +25,7 @@
 				"johnpapa.angular2",
 				"sibiraj-s.vscode-scss-formatter",
 				"gruntfuggly.todo-tree",
-				"nrwl.angular-console",
+				"nrwl.angular-console"
 			]
 		}
 	},
@@ -36,7 +36,7 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or with the host.
-	"forwardPorts": [3000, 5432],
+	"forwardPorts": [3000, 4200],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "pnpm install"

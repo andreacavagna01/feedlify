@@ -6,3 +6,4 @@ lib/shared/node_modules/**
 lib/shared-frontend/node_modules/**
 lib/shared-frontend/dist/**
 pnpm-lock.yaml
+packages/frontend/package-lock.json
