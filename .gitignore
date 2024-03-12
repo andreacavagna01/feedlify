@@ -1,9 +1,7 @@
 node_modules/**
-packages/backend/dist/**
-packages/frontend/dist/**
 lib/shared/dist/**
 lib/shared/node_modules/**
 lib/shared-frontend/node_modules/**
 lib/shared-frontend/dist/**
 pnpm-lock.yaml
-packages/frontend/package-lock.json
+
