@@ -6,7 +6,7 @@ interface IOptions {
 }
 
 
-export const api = {
+export const Api = {
   get(url: string, options: IOptions = { absoluteUrl: false }) {
     return axios
       .get(buildUrl(url,options.absoluteUrl), {
