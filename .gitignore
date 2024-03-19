@@ -5,3 +5,62 @@ lib/shared-frontend/node_modules/**
 lib/shared-frontend/dist/**
 pnpm-lock.yaml
 
+
+# BACKEND
+# compiled output
+packages/backend/dist
+packages/backend/node_modules
+packages/backend/build
+
+# Logs
+packages/backend/logs
+packages/backend/*.log
+packages/backend/npm-debug.log*
+packages/backend/pnpm-debug.log*
+packages/backend/yarn-debug.log*
+packages/backend/yarn-error.log*
+packages/backend/lerna-debug.log*
+
+# OS
+packages/backend/.DS_Store
+
+# Tests
+packages/backend/coverage
+packages/backend/.nyc_output
+
+# IDEs and editors
+packages/backend/.idea
+packages/backend/.project
+packages/backend/.classpath
+packages/backend/.c9/
+packages/backend/*.launch
+packages/backend/.settings/
+packages/backend/*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# dotenv environment variable files
+packages/backend/.env
+packages/backend/.env.development.local
+packages/backend/.env.test.local
+packages/backend/.env.production.local
+packages/backend/.env.local
+
+# temp directory
+packages/backend/.temp
+packages/backend/.tmp
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+node_modules
