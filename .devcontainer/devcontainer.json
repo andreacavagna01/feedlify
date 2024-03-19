@@ -25,7 +25,7 @@
 				"johnpapa.angular2",
 				"sibiraj-s.vscode-scss-formatter",
 				"gruntfuggly.todo-tree",
-				"nrwl.angular-console"
+				"bradlc.vscode-tailwindcss"
 			]
 		}
 	},
