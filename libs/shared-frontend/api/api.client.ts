@@ -13,7 +13,7 @@ export const Api = {
         headers: getHeaders(),
       })
       .then((response) => {
-        return response.data?.data;
+        return response.data;
       })
       .catch((error) => {
         // eslint-disable-next-line promise/no-return-wrap
@@ -36,7 +36,7 @@ export const Api = {
   post(url: string, payload: any) {
     return axios
       .post(`${API_ROOT}${url}`, payload, { headers: getHeaders() })
-      .then((response) => response.data?.data)
+      .then((response) => response.data)
       .catch((error) => {
         // eslint-disable-next-line promise/no-return-wrap
         return Promise.reject(error?.response?.data || error?.response || error);
@@ -48,7 +48,7 @@ export const Api = {
       .patch(`${API_ROOT}${url}`, payload, {
         headers: getHeaders(),
       })
-      .then((response) => response.data?.data)
+      .then((response) => response.data)
       .catch((error) => {
         // eslint-disable-next-line promise/no-return-wrap
         return Promise.reject(error?.response?.data || error?.response || error);
@@ -61,7 +61,7 @@ export const Api = {
         ...payload,
         headers: getHeaders(),
       })
-      .then((response) => response.data?.data)
+      .then((response) => response.data)
       .catch((error) => {
         // eslint-disable-next-line promise/no-return-wrap
         return Promise.reject(error?.response?.data || error?.response || error);

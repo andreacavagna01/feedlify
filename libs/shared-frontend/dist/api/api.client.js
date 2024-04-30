@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { API_ROOT } from '../config';
-export const api = {
+export const Api = {
     get(url, options = { absoluteUrl: false }) {
         return axios
             .get(buildUrl(url, options.absoluteUrl), {
             headers: getHeaders(),
         })
             .then((response) => {
-            return response.data?.data;
+            return response.data;
         })
             .catch((error) => {
             return Promise.reject(error?.response?.data || error?.response || error);
@@ -26,7 +26,7 @@ export const api = {
     post(url, payload) {
         return axios
             .post(`${API_ROOT}${url}`, payload, { headers: getHeaders() })
-            .then((response) => response.data?.data)
+            .then((response) => response.data)
             .catch((error) => {
             return Promise.reject(error?.response?.data || error?.response || error);
         });
@@ -36,7 +36,7 @@ export const api = {
             .patch(`${API_ROOT}${url}`, payload, {
             headers: getHeaders(),
         })
-            .then((response) => response.data?.data)
+            .then((response) => response.data)
             .catch((error) => {
             return Promise.reject(error?.response?.data || error?.response || error);
         });
@@ -47,7 +47,7 @@ export const api = {
             ...payload,
             headers: getHeaders(),
         })
-            .then((response) => response.data?.data)
+            .then((response) => response.data)
             .catch((error) => {
             return Promise.reject(error?.response?.data || error?.response || error);
         });
