@@ -1,9 +1,12 @@
 node_modules/**
+pnpm-lock.yaml
+
+#LIBS
 lib/shared/dist/**
 lib/shared/node_modules/**
 lib/shared-frontend/node_modules/**
 lib/shared-frontend/dist/**
-pnpm-lock.yaml
+
 
 
 # BACKEND
