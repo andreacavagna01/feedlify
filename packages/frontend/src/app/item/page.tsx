@@ -14,6 +14,8 @@ export default function ItemPage() {
       setItems(res);
     })
   }, [] );
+
+
   
   return <div>
       <h1>ITEMS PAGE</h1>
