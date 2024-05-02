@@ -25,7 +25,8 @@
 				"johnpapa.angular2",
 				"sibiraj-s.vscode-scss-formatter",
 				"gruntfuggly.todo-tree",
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				"cweijan.vscode-mysql-client2"
 			]
 		}
 	},
