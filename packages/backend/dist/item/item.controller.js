@@ -16,6 +16,7 @@ exports.ItemController = void 0;
 const common_1 = require("@nestjs/common");
 const item_service_1 = require("./item.service");
 const update_item_dto_1 = require("./dto/update-item.dto");
+const typeorm_1 = require("typeorm");
 let ItemController = class ItemController {
     constructor(itemService) {
         this.itemService = itemService;
@@ -41,19 +42,64 @@ let ItemController = class ItemController {
         return itemsDto;
     }
     async findOne(id) {
-        const item = await this.itemService.findOne(id);
-        return {
-            id: item.id,
-            name: item.name,
-            description: item.description,
-        };
+        try {
+            const item = await this.itemService.findOne(id);
+            return {
+                id: item.id,
+                name: item.name,
+                description: item.description,
+            };
+        }
+        catch (e) {
+            if (e instanceof typeorm_1.QueryFailedError) {
+                throw new common_1.HttpException({
+                    status: common_1.HttpStatus.NOT_FOUND,
+                    error: `The Item with id: ${id} is not found`,
+                }, common_1.HttpStatus.NOT_FOUND, {
+                    cause: e,
+                });
+            }
+            else {
+                throw e;
+            }
+        }
     }
     async update(id, updateItemDto) {
-        await this.itemService.update(id, updateItemDto);
-        return this.itemService.findOne(id);
+        try {
+            await this.itemService.update(id, updateItemDto);
+            return this.itemService.findOne(id);
+        }
+        catch (e) {
+            if (e instanceof typeorm_1.QueryFailedError) {
+                throw new common_1.HttpException({
+                    status: common_1.HttpStatus.NOT_FOUND,
+                    error: `The Item with id: ${id} is not found`,
+                }, common_1.HttpStatus.NOT_FOUND, {
+                    cause: e,
+                });
+            }
+            else {
+                throw e;
+            }
+        }
     }
     remove(id) {
-        return this.itemService.remove(id);
+        try {
+            return this.itemService.remove(id);
+        }
+        catch (e) {
+            if (e instanceof typeorm_1.QueryFailedError) {
+                throw new common_1.HttpException({
+                    status: common_1.HttpStatus.NOT_FOUND,
+                    error: `The Item with id: ${id} is not found`,
+                }, common_1.HttpStatus.NOT_FOUND, {
+                    cause: e,
+                });
+            }
+            else {
+                throw e;
+            }
+        }
     }
 };
 exports.ItemController = ItemController;
