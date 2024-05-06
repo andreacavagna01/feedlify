@@ -17,14 +17,14 @@ export default function ItemPage() {
   }, [] );
 
   const deleteItemAction = (id: string) => {
-    console.log("deleting");
+    console.log("deleting " + id);
     deleteItem(id);
     setItems(items => items.filter((item) => item.id !== id));
   };
   
   return <div>
-      <h1>ITEMS PAGE</h1>
-      <h2>SUBTITLE HERE</h2>
+      <h1 className='text-4xl font-bold'>ITEMS PAGE</h1>
+      <h2 className='text-2xl'>SUBTITLE HERE</h2>
       <Suspense fallback={<Loading/>}>
         <ItemListComponent items={items} handleDelete={deleteItemAction}></ItemListComponent>
       </Suspense>

@@ -8,17 +8,13 @@ interface IOptions {
 
 export const Api = {
   get(url: string, options: IOptions = { absoluteUrl: false }) {
-    return axios
-      .get(buildUrl(url,options.absoluteUrl), {
-        headers: getHeaders(),
-      })
-      .then((response) => {
-        return response.data;
-      })
-      .catch((error) => {
-        // eslint-disable-next-line promise/no-return-wrap
-        return Promise.reject(error?.response?.data || error?.response || error);
-      });
+    const config = {
+      method: 'GET',
+      headers: getHeaders()
+    }
+    return window
+      .fetch(buildUrl(url,options.absoluteUrl), config,)
+      .then(response => response.json())
   },
 
   put(url: string, payload: any) {

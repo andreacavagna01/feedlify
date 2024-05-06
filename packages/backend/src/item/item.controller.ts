@@ -27,6 +27,8 @@ export class ItemController {
       id: item.id,
       name: item.name,
       description: item.description,
+      createdAt: item.created_at,
+      updatedAt: item.updated_at,
     };
   }
 
@@ -39,19 +41,23 @@ export class ItemController {
         description: item.description,
         id: item.id,
         name: item.name,
+        createdAt: item.created_at,
+        updatedAt: item.updated_at,
       });
     });
     return itemsDto;
   }
 
   @Get(':id')
-  async findOne(@Param('id') id: string) {
+  async findOne(@Param('id') id: string): Promise<ItemDto> {
     try {
       const item: Item = await this.itemService.findOne(id);
       return {
         id: item.id,
         name: item.name,
         description: item.description,
+        createdAt: item.created_at,
+        updatedAt: item.updated_at,
       };
     } catch (e) {
       if (e instanceof QueryFailedError) {

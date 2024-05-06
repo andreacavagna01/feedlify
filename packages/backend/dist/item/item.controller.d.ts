@@ -8,11 +8,7 @@ export declare class ItemController {
     constructor(itemService: ItemService);
     create(createItemDto: CreateItemDto): Promise<ItemDto>;
     findAll(): Promise<ItemDto[]>;
-    findOne(id: string): Promise<{
-        id: string;
-        name: string;
-        description: string;
-    }>;
+    findOne(id: string): Promise<ItemDto>;
     update(id: string, updateItemDto: UpdateItemDto): Promise<Item>;
     remove(id: string): Promise<void>;
 }

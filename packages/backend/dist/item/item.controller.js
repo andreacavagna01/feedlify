@@ -27,6 +27,8 @@ let ItemController = class ItemController {
             id: item.id,
             name: item.name,
             description: item.description,
+            createdAt: item.created_at,
+            updatedAt: item.updated_at,
         };
     }
     async findAll() {
@@ -37,6 +39,8 @@ let ItemController = class ItemController {
                 description: item.description,
                 id: item.id,
                 name: item.name,
+                createdAt: item.created_at,
+                updatedAt: item.updated_at,
             });
         });
         return itemsDto;
@@ -48,6 +52,8 @@ let ItemController = class ItemController {
                 id: item.id,
                 name: item.name,
                 description: item.description,
+                createdAt: item.created_at,
+                updatedAt: item.updated_at,
             };
         }
         catch (e) {

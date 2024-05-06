@@ -26,6 +26,21 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Item.prototype, "description", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)({
+        type: 'timestamp',
+        default: () => 'CURRENT_TIMESTAMP(6)',
+    }),
+    __metadata("design:type", Date)
+], Item.prototype, "created_at", void 0);
+__decorate([
+    (0, typeorm_1.UpdateDateColumn)({
+        type: 'timestamp',
+        default: () => 'CURRENT_TIMESTAMP(6)',
+        onUpdate: 'CURRENT_TIMESTAMP(6)',
+    }),
+    __metadata("design:type", Date)
+], Item.prototype, "updated_at", void 0);
 exports.Item = Item = __decorate([
     (0, typeorm_1.Entity)()
 ], Item);
