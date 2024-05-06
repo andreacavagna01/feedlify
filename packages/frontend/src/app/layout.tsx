@@ -4,6 +4,7 @@ import "./globals.scss";
 import Sidebar from "@/ui/Sidebar";
 import { Suspense } from "react";
 import Loading from "./loading";
+import {NextUIProvider} from "@nextui-org/react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,19 +20,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
-      <body>
-        <div className="flex h-screen flex-col md:flex-row md:overflow-hidden ">
-          <div className="w-full flex-none md:w-64">
-            <Sidebar></Sidebar>
-          </div>
-          <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
-            <Suspense fallback={<Loading></Loading>}>
-              {children}
-            </Suspense>
-          </div>
-        </div>
-      </body>
-    </html>
+
+      <html>
+        <body>
+        <NextUIProvider>
+            <div className="flex h-screen flex-col md:flex-row md:overflow-hidden ">
+              <div className="w-full flex-none md:w-64">
+                <Sidebar></Sidebar>
+              </div>
+              <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
+                <Suspense fallback={<Loading></Loading>}>
+                  {children}
+                </Suspense>
+              </div>
+            </div>
+          </NextUIProvider>
+        </body>
+      </html>
+
   );
 }

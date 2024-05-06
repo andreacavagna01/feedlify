@@ -3,6 +3,7 @@ import { getItem } from "@/services/itemService";
 import { useState, useEffect, Suspense } from "react";
 import { ItemDto } from "shared-frontend";
 import Loading from "../loading";
+import { Button } from "@nextui-org/react";
 
 export default function Page({ params }: { params: { item: string } }) {
 
@@ -22,6 +23,15 @@ export default function Page({ params }: { params: { item: string } }) {
         <p><span>Item ID</span> {item?.id}</p>
         <p><span>Created At</span> {item?.createdAt?.toString()}</p>
         <p><span>Updated At</span> {item?.updatedAt?.toString()}</p>
+        <Button size="sm">
+          Small
+        </Button>  
+        <Button size="md">
+          Medium
+        </Button>  
+        <Button size="lg">
+          Large
+        </Button>  
       </Suspense>
     </div>
   }
