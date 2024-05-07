@@ -18,14 +18,15 @@ export default function Page({ params }: { params: { item: string } }) {
 
     return <div>
       <Suspense fallback={<Loading/>}>
-        <h1>{item?.name}</h1>
-        <h2>{item?.description}</h2>
+        <h1 className="text-4xl font-bold">{item?.name}</h1>
+        <h2 className='text-2xl'>{item?.description}</h2>
         <p><span>Item ID</span> {item?.id}</p>
         <p><span>Created At</span> {item?.createdAt?.toString()}</p>
         <p><span>Updated At</span> {item?.updatedAt?.toString()}</p>
-        <Button size="sm">
-          Small
-        </Button>  
+
+        <Button color="primary">
+          Button
+        </Button> 
         <Button size="md">
           Medium
         </Button>  

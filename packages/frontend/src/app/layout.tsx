@@ -5,6 +5,7 @@ import Sidebar from "@/ui/Sidebar";
 import { Suspense } from "react";
 import Loading from "./loading";
 import {NextUIProvider} from "@nextui-org/react";
+import NavbarComponent from "@/ui/NavbarComponent";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,6 +25,7 @@ export default function RootLayout({
       <html>
         <body>
         <NextUIProvider>
+            <NavbarComponent></NavbarComponent>
             <div className="flex h-screen flex-col md:flex-row md:overflow-hidden ">
               <div className="w-full flex-none md:w-64">
                 <Sidebar></Sidebar>
