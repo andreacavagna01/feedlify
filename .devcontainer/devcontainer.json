@@ -40,7 +40,7 @@
 	"forwardPorts": [3000, 4200],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pnpm install"
+	"postCreateCommand": "pnpm config set store-dir /home/node/.local/share/pnpm/store && pnpm install"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
