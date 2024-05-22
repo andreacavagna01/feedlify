@@ -25,6 +25,7 @@ export default function RootLayout({
       <html>
         <body>
         <NextUIProvider>
+          <div className="dark">
             <NavbarComponent></NavbarComponent>
             <div className="flex h-screen flex-col md:flex-row md:overflow-hidden ">
               <div className="w-full flex-none md:w-64">
@@ -36,6 +37,7 @@ export default function RootLayout({
                 </Suspense>
               </div>
             </div>
+          </div>
           </NextUIProvider>
         </body>
       </html>

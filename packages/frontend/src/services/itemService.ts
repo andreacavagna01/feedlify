@@ -21,7 +21,7 @@ export async function getItem(id: string) {
 
 export async function createItem(createItemDto: CreateItemDto) {
   try {
-      return await Api.post(`/item/create}`, createItemDto);
+      return await Api.post(`/item`, createItemDto);
     } catch (error) {
       console.error(error);
     }

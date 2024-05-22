@@ -18,51 +18,36 @@ export const Api = {
   },
 
   put(url: string, payload: any) {
-    return axios
-      .put(`${API_ROOT}${url}`, payload, {
-        headers: getHeaders(),
-      })
-      .then((response) => response.data?.data)
-      .catch((error) => {
-        // eslint-disable-next-line promise/no-return-wrap
-        return Promise.reject(error?.response?.data || error?.response || error);
-      });
+    return window.fetch(`${API_ROOT}${url}`, {
+      method: 'PUT',
+      body: payload,
+      headers: {'Content-Type': 'application/json; charset=UTF-8'} 
+    })
   },
 
   post(url: string, payload: any) {
-    return axios
-      .post(`${API_ROOT}${url}`, payload, { headers: getHeaders() })
-      .then((response) => response.data)
-      .catch((error) => {
-        // eslint-disable-next-line promise/no-return-wrap
-        return Promise.reject(error?.response?.data || error?.response || error);
-      });
+    return window.fetch(`${API_ROOT}${url}`, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      headers: {'Content-Type': 'application/json; charset=UTF-8'} 
+    })
   },
 
   patch(url: string, payload: any) {
-    return axios
-      .patch(`${API_ROOT}${url}`, payload, {
-        headers: getHeaders(),
-      })
-      .then((response) => response.data)
-      .catch((error) => {
-        // eslint-disable-next-line promise/no-return-wrap
-        return Promise.reject(error?.response?.data || error?.response || error);
-      });
+    return window.fetch(`${API_ROOT}${url}`, {
+      method: 'PATCH',
+      body: payload,
+      headers: {'Content-Type': 'application/json; charset=UTF-8'} 
+    })
   },
 
   delete(url: string, payload = {}) {
-    return axios
-      .delete(`${API_ROOT}${url}`, {
-        ...payload,
-        headers: getHeaders(),
-      })
-      .then((response) => response.data)
-      .catch((error) => {
-        // eslint-disable-next-line promise/no-return-wrap
-        return Promise.reject(error?.response?.data || error?.response || error);
-      });
-  },
+    return window.fetch(`${API_ROOT}${url}`, {
+      method: 'DELETE',
+      body: JSON.stringify(payload),
+      headers: {'Content-Type': 'application/json; charset=UTF-8'} 
+    })
+  }
 }
 
 function getHeaders() {
