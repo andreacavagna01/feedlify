@@ -51,7 +51,7 @@ export default function ItemPage() {
   return <div>
       <h1 className='text-4xl font-bold'>ITEMS PAGE</h1>
       <h2 className='text-2xl'>SUBTITLE HERE</h2>
-      <Button onPress={onOpen} >Open Modal</Button>
+      <Button onPress={onOpen} >Add item</Button>
       <Suspense fallback={<Loading/>}>
         <ItemListComponent items={items} handleDelete={deleteItemAction}></ItemListComponent>
       </Suspense>

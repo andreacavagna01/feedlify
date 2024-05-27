@@ -3,7 +3,7 @@ import { ItemDto } from "shared-frontend";
 
 export default function ItemListComponent(props: { items: ItemDto[]; handleDelete: any}) {
   return (
-    <div className="item-list">
+    <div className="item-list mt-5">
         {props.items.map((item: ItemDto) => (
           <ItemCardComponent 
             key= {item.id}
