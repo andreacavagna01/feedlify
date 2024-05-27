@@ -33,13 +33,16 @@ export default function ItemPage() {
       name: formDataJSON.title,
       description: formDataJSON.description
     }
-    createItem(createItemDTO);
+    createItem(createItemDTO).then(item => {
+      setItems( // Replace the state
+        [ // with a new array
+          ...items, // that contains all the old items
+          // and one new item at the end
+          item
+        ]
+      );
+    });
 
-    // refreshing items in list
-    getItems()
-    .then(res => {
-      setItems(res);
-    })
     return onClose();
   }
 
