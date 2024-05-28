@@ -10,7 +10,8 @@ export class AppController {
   @Get()
   @UseGuards(new AuthGuard())
   getHello(@Session() session: SessionContainer): string {
-    console.log(session);
+    const userId = session.getUserId();
+    console.log(userId);
     return this.appService.getHello();
   }
 }

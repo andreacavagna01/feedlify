@@ -3,7 +3,7 @@ export const appInfo = {
     appName: "Feedlify",
     apiDomain: "http://localhost:3000",
     websiteDomain: "http://localhost:6006",
-    apiBasePath: "/api/auth",
+    apiBasePath: "/auth",
     websiteBasePath: "/auth"
   }
   

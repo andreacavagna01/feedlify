@@ -23,8 +23,9 @@ import { AuthModule } from './auth/auth.module';
     }),
     AuthModule.forRoot({
       // https://try.supertokens.com is for demo purposes. Replace this with the address of your core instance (sign up on supertokens.com), or self host a core.
-      connectionURI: 'https://try.supertokens.com',
-      // apiKey: <API_KEY(if configured)>,
+      connectionURI:
+        'https://st-dev-6acecd30-1cde-11ef-ac0d-910b1b87b302.aws.supertokens.io',
+      apiKey: 'uicjurk3bLR22LRrams4p5a5PP',
       appInfo: {
         // Learn more about this on https://supertokens.com/docs/session/appinfo
         appName: 'Feedlify',
