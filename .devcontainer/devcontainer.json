@@ -16,6 +16,9 @@
 		},
 		"ghcr.io/devcontainers-contrib/features/pnpm:2": {
 			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/nestjs-cli:2": {
+			"version": "latest"
 		}
 	},
 	"customizations": {
