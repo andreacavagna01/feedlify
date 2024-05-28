@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import {NextUIProvider} from "@nextui-org/react";
 import NavbarComponent from "@/ui/NavbarComponent";
+import { SuperTokensProvider } from "@/ui/supertokensProvider";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,23 +24,25 @@ export default function RootLayout({
   return (
 
       <html>
-        <body>
-        <NextUIProvider>
-          <div className="dark">
-            <NavbarComponent></NavbarComponent>
-            <div className="flex h-screen flex-col md:flex-row md:overflow-hidden ">
-              <div className="w-full flex-none md:w-64">
-                <Sidebar></Sidebar>
-              </div>
-              <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
-                <Suspense fallback={<Loading></Loading>}>
-                  {children}
-                </Suspense>
+        <SuperTokensProvider>
+          <body>
+          <NextUIProvider>
+            <div className="dark">
+              <NavbarComponent></NavbarComponent>
+              <div className="flex h-screen flex-col md:flex-row md:overflow-hidden ">
+                <div className="w-full flex-none md:w-64">
+                  <Sidebar></Sidebar>
+                </div>
+                <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
+                  <Suspense fallback={<Loading></Loading>}>
+                    {children}
+                  </Suspense>
+                </div>
               </div>
             </div>
-          </div>
-          </NextUIProvider>
-        </body>
+            </NextUIProvider>
+          </body>
+        </SuperTokensProvider>
       </html>
 
   );
