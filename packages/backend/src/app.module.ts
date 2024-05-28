@@ -26,7 +26,7 @@ import { AuthModule } from './auth/auth.module';
       connectionURI: 'https://try.supertokens.com',
       // apiKey: <API_KEY(if configured)>,
       appInfo: {
-        // Learn more about this on https://supertokens.com/docs/thirdparty/appinfo
+        // Learn more about this on https://supertokens.com/docs/session/appinfo
         appName: 'Feedlify',
         apiDomain: 'http://localhost:3000',
         websiteDomain: 'http://localhost:6006',

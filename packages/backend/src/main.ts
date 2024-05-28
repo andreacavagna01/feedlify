@@ -8,6 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     logger: ['verbose'],
   });
+
   app.enableCors({
     origin: ['http://localhost:6006'],
     allowedHeaders: ['content-type', ...supertokens.getAllCORSHeaders()],

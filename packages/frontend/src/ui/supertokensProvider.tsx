@@ -5,11 +5,8 @@ import SuperTokensReact from 'supertokens-auth-react';
 import { frontendConfig, setRouter } from '../../config/frontend';
 import { usePathname, useRouter } from 'next/navigation';
 
-console.log("initializing");
-
 if (typeof window !== 'undefined') {
   // we only want to call this init function on the frontend, so we check typeof window !== 'undefined'
-  console.log("initialized");
   SuperTokensReact.init(frontendConfig());
 }
 

@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
+import { SupertokensService } from './supertokens/supertokens.service';
 import { MiddlewareConsumer, NestModule, DynamicModule } from '@nestjs/common';
 import { AuthMiddleware } from './auth.middleware';
 import { ConfigInjectionToken, AuthModuleConfig } from './config.interface';
-import { SupertokensService } from './supertokens/supertokens.service';
 
 @Module({
-  providers: [SupertokensService],
+  providers: [],
   exports: [],
   controllers: [],
 })

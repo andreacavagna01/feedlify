@@ -1,8 +1,8 @@
-import ThirdPartyReact, {Google} from 'supertokens-auth-react/recipe/thirdparty'
+import ThirdPartyEmailPasswordReact from 'supertokens-auth-react/recipe/thirdpartyemailpassword'
 import SessionReact from 'supertokens-auth-react/recipe/session'
 import { appInfo } from './appInfo'
-import { SuperTokensConfig } from 'supertokens-auth-react/lib/build/types'
 import { useRouter } from "next/navigation";
+import { SuperTokensConfig } from 'supertokens-auth-react/lib/build/types'
 
 const routerInfo: { router?: ReturnType<typeof useRouter>; pathName?: string } =
   {};
@@ -19,11 +19,11 @@ export const frontendConfig = (): SuperTokensConfig => {
   return {
     appInfo,
     recipeList: [
-      ThirdPartyReact.init({
+      ThirdPartyEmailPasswordReact.init({
         signInAndUpFeature: {
           providers: [
-            ThirdPartyReact.Google.init(),
-            ThirdPartyReact.Github.init(),
+            ThirdPartyEmailPasswordReact.Google.init(),
+            ThirdPartyEmailPasswordReact.Github.init(),
           ],
         },
       }),
