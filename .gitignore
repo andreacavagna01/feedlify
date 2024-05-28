@@ -11,9 +11,9 @@ lib/shared-frontend/dist/**
 
 # BACKEND
 # compiled output
-packages/backend/dist
-packages/backend/node_modules
-packages/backend/build
+packages/backend/dist/** 
+packages/backend/node_modules/**
+packages/backend/build/**
 
 # Logs
 packages/backend/logs
